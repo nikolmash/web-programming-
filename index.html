@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="stylesheet" href="css/new 2.css" type="text/css"/>
+<meta charset="utf-8">
+<title>Поиск в корпусе. Национальный корпус русского языка</title>
+</head>
+
+<body>
+<header class="main-header">
+<div class="container">
+<div class="header-top">
+<div class="logo">
+<img src="img/corpus.png" height="135" width="247,5" alt="Russian National Corpus">
+</div>
+
+
+<nav class="main-menu">
+<ul>
+<li><a href="#">Главная</a></li>
+<li><a href="#">Использование корпуса</a></li>
+<li><a href="#">English</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+
+
+<section class="main-search">
+<div class="container">
+<ul>
+<li><div class="menu">
+  <details open>
+    <summary><span>Основной корпус</span></summary>
+    <a href="#">биграммы</a>
+    <a href="#">триграммы</a>
+    <a href="#">4-граммы</a>
+	<a href="#">5-граммы</a>
+  </details>
+  <details>
+    <summary><span>Синтаксический</span></summary>
+  </details>
+  <details>
+    <summary><span>Газетный</span></summary>
+    <a href="#">СМИ 2000-х</a>
+    <a href="#">региональный</a>
+  </details>
+  <details>
+    <summary><span>Параллельный</span></summary>
+    <a href="#">английский</a>
+    <a href="#">белорусский</a>
+    <a href="#">болгарский</a>
+	<a href="#">бурятский</a>
+	<a href="#">испанский</a>
+	<a href="#">итальянский</a>
+	<a href="#">китайский</a>
+	<a href="#">латышский</a>
+	<a href="#">немецкий</a>
+	<a href="#">русская классика в немецких переводах</a>
+	<a href="#">польский</a>
+	<a href="#">украинский</a>
+	<a href="#">французкий</a>
+	<a href="#">шведский</a>
+	<a href="#">эстонский</a>
+	<a href="#">многоязычный</a>
+  </details>
+    <details>
+    <summary><span>Обучающий</span></summary>
+  </details>
+    <details>
+    <summary><span>Диалектный</span></summary>
+  </details>
+    <details>
+    <summary><span>Поэтический</span></summary>
+  </details>
+    <details>
+    <summary><span>Устный</span></summary>
+  </details>
+    <details>
+    <summary><span>Акцентологический</span></summary>
+  </details>
+    <details>
+    <summary><span>Мультимедийный</span></summary>
+  </details>
+    <details>
+    <summary><span>Мультипарк</span></summary>
+    <a href="#">"Ревизор"</a>
+    <a href="#">англо-русский</a>
+  </details>
+    <details>
+    <summary><span>Исторический</span></summary>
+    <a href="#">древнерусский</a>
+    <a href="#">берестяные грамоты</a>
+	<a href="#">старорусский</a>
+	<a href="#">церковнославянский</a>
+  </details>
+</div>
+</li>
+<li><div class="corpus">
+<h1>Основной корпус </h1>
+<a href="#">Задать подкорпус</a>
+</div>
+<div class="search">
+<h2>Поиск точных форм<details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p>Запрос, состоящий из одного слова (например, <i>отечества</i>), находит все контексты, содержащие точную форму данного слова (но не <i>отечеством, отечеств</i> и т. д. ). Запрос в поиске точных форм, содержащий несколько слов (<i>И дым отечества нам сладок и приятен</i>), находит все контексты, содержащие все словоформы запроса в пределах одного предложения — следующие не обязательно в том же порядке, что и в запросе (например, найдется контекст <i>Отечества и дым нам сладок и приятен</i>).</p></details> </h2>
+<p>Слово или фраза</p>
+<input type="text" id="exactform" name="exactform">
+<p><input class="btn"type="submit" value="искать">
+<input class="btn" type="reset" value="очистить"></p>
+</p>
+</div>
+
+
+<div class="grammatic_search">
+<h2>Лексико-грамматический поиск <details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p>В лексико-грамматическом поиске можно задавать последовательность лексем и/или словоформ, обладающих определенными грамматическими и/или семантическими характеристиками. Каждая строка формы расширенного поиска соответствует лексеме или словоформе. В одной строке можно указать только конкретную лексему (словоформу), или только грамматические признаки, или только семантические признаки, или же любые попарные сочетания этих значений, или, наконец, и то, и другое, и  третье. См. подробнее помощь при поле "Слово", "Грамматические признаки", "Семантические признаки".</p></details></h2>
+<div class="grammatic-parameters">
+<div class="word">
+<p>Слово <details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p>В поле «Слово» указывается искомая лексема (обязательно в словарной форме: отечество, а не отечества) или словоформа (в кавычках: "отечества"). В поле «Слово» действуют символ *, обозначающий любую последовательность символов в начале или конце лексемы или словоформы, а также логические операторы «ИЛИ» и «НЕ»: для поиска слов <i>любовь</i> или <i>ненависть</i> нужно ввести любовь|ненависть, для поиска любого слова, кроме <i>без</i>, нужно ввести -без. Эти символы можно комбинировать при помощи логического «И», задаваемого знаком & или одиночным пробелом. Так, запрос *вед -швед найдет все лексемы, заканчивающиеся на <i>вед (языковед, искусствовед...)</i>, но не <i>швед</i>; запрос мой&"его" найдет все вхождения лексемы <i>мой</i> и словоформы <i>его</i>. Чтобы искать все лексемы, кроме нескольких определенных, следует поставить в начале запроса звёздочку: например * -папа -мама
+</p></details><input id="form" type="text" id="form" name="form">
+</p>
+</div>
+<p>Грам.признаки <details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p><p>В поле «Грамматические признаки» указываются искомые морфологические характеристики лексемы и/или словоформы. Эти признаки можно указать при помощи служебного окна, открывающегося по ссылке «Выбрать», или же набрать на клавиатуре.</p> <p>В поле «Грамматические признаки» действует логическое «ИЛИ», задаваемое при помощи знака |, а также логическое «И», задаваемое знаком & или одиночным пробелом (разрешается использование любого числа незначащих пробелов вокруг знаков | и &). При записи сложных выражений используются круглые скобки. Например, S & (nom|acc) означает существительное в именительном или винительном падеже. Инвентарь обозначений грамматических признаков и необходимые комментарии см. в разделе «Морфология». Но проще выбрать грамматические признаки (или задать несколько альтернативных лексем) в служебном окне.</p> <p>Служебное окно, открывающееся по ссылке «Выбрать», содержит перечень морфологических характеристик, разбитых по грамматическим категориям: часть речи, падеж, род, залог, число и т. п. Отметьте «галочками» те характеристики словоформ, которые вы хотите найти. Внутри каждой категории признаки в нормальном случае являются взаимоисключающими (например, глагол не может стоять в первом и третьем лице одновременно), поэтому «галочки», отмечающие грамматические признаки одной категории, трактуются как логическое «ИЛИ» (невзаимоисключающие пометы одной категории при одном слове также найдутся), а отмечающие признаки разных категорий — как логическое «И». Чтобы инвертировать отмеченные признаки одной категории (изменить выбранные на невыбранные, и наоборот), щелкните левой кнопкой мыши на названии этой категории. Это способ выразить логическое «НЕ»: например, чтобы искать любой падеж, кроме творительного, выберите позицию «творительный падеж», а затем инвертируйте список значений категории падежа.</p>
+<p/></details>
+<div class="hidden"><details><summary><span>Выбрать</span></summary>
+<table>
+<tr><td rowspan="3">Часть речи<br>
+<input type="checkbox">существительное<br>
+<input type="checkbox">прилагательное<br>
+<input type="checkbox">числительное<br>
+<input type="checkbox">числ-прил<br>
+<input type="checkbox">глагол<br>
+<input type="checkbox">наречие<br>
+<input type="checkbox">предикатив<br>
+<input type="checkbox">вводное слово<br>
+<input type="checkbox">мест-сущ<br>
+<input type="checkbox">мест-прил<br>
+<input type="checkbox">мест-предикатив<br>
+<input type="checkbox">местоименное наречие<br>
+<input type="checkbox">предлог<br>
+<input type="checkbox">союз<br>
+<input type="checkbox">частица<br>
+<input type="checkbox">междометие
+</td>
+<td rowspan="2">Падеж<br>
+<input type="checkbox">именительный<br>
+<input type="checkbox">звательный*<br>
+<input type="checkbox">родительный<br>
+<input type="checkbox">родительный 2<br>
+<input type="checkbox">дательный<br>
+<input type="checkbox">винительный<br>
+<input type="checkbox">винительный 2*<br>
+<input type="checkbox">творительный<br>
+<input type="checkbox">предложный<br>
+<input type="checkbox">предложный 2<br>
+<input type="checkbox">счетная форма
+</td>
+<td>Наклонение/Форма<br>
+<input type="checkbox">изъявительное<br>
+<input type="checkbox">повелительное<br>
+<input type="checkbox">повелительное 2<br>
+<input type="checkbox">инфинитив<br>
+<input type="checkbox">причастие<br>
+<input type="checkbox">деепричастие
+</td>
+<td>Степень/Краткость<br>
+<input type="checkbox">сравнительная<br>
+<input type="checkbox">сравнительная 2<br>
+<input type="checkbox">превосходная<br>
+<input type="checkbox">полная форма<br>
+<input type="checkbox">краткая форма
+</td></tr>
+<tr><td>Время<br>
+<input type="checkbox">настоящее<br>
+<input type="checkbox">будущее<br>
+<input type="checkbox">прошедшее
+</td>
+<td>Переходность<br>
+<input type="checkbox">переходный*<br>
+<input type="checkbox">непереходный*
+</td></tr>
+<tr><td>Число<br>
+<input type="checkbox">единственное<br>
+<input type="checkbox">множественное
+</td>
+<td>Лицо<br>
+<input type="checkbox">первое<br>
+<input type="checkbox">второе<br>
+<input type="checkbox">третье
+</td>
+<td rowspan="3">Прочее<br>
+<input type="checkbox">цифровая запись<br>
+<input type="checkbox">аномальная форма*<br>
+<input type="checkbox">искаженная форма*<br>
+<input type="checkbox">инициал*<br>
+<input type="checkbox">сокращение*<br>
+<input type="checkbox">несклоняемое*<br>
+<input type="checkbox">топоним**
+</td></tr>
+<tr><td rowspan="2">Имена собственные<br>
+<input type="checkbox">имя<br>
+<input type="checkbox">фамилия<br>
+<input type="checkbox">отчество
+</td>
+<td>Род<br>
+<input type="checkbox">мужской<br>
+<input type="checkbox">женский<br>
+<input type="checkbox">средний<br>
+<input type="checkbox">общий
+</td>
+<td>Залог<br>
+<input type="checkbox">действительный<br>
+<input type="checkbox">срадательный<br>
+<input type="checkbox">медиальный
+</td></tr>
+<tr><td>Одушевленность<br>
+<input type="checkbox">одушевленный<br>
+<input type="checkbox">неодушевленный
+</td>
+<td>Вид<br>
+<input type="checkbox">совершенный<br>
+<input type="checkbox">несовершенный
+</td></tr></table>
+</details>
+</div>
+
+<p>Семант.признаки <details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p><p>В поле «Семантические признаки» указываются искомые семантические и словообразовательные характеристики лексемы. Эти признаки можно задать при помощи служебного окна, открывающегося по ссылке «Выбрать», или же набрать на клавиатуре.</p>
+<p>Служебное окно, открывающееся по ссылке «Выбрать», содержит перечень семантических характеристик, разбитых по нескольким категориям: разряд, таксономия, мереология, оценка, словообразование и т. п. При наведении курсора на любой пункт этого перечня во всплывающей подсказке появятся примеры слов, имеющих данные характеристики. Отметьте «галочками» (checkbox) те характеристики словоформ, которые вы хотите найти. «Галочки», отмечающие семантические признаки внутри одной категории, трактуются как логическое «ИЛИ» (например, в категории «Таксономия» можно задать поиск глаголов «движения» и «физического воздействия»). Галочки, отмечающие признаки разных категорий, трактуются как логическое «И» (например, чтобы найти приставочные глаголы движения, нужно отметить «галочками» признак «движение» в категории «Таксономия» и признак «приставочные глаголы» в категории «Словообразование».</p>
+<p>Как правило, семантические характеристики имеют иерархическую структуру, например:<br>
+бытийная сфера<br>
+существование<br>
+начало существования<br>
+прекращение существования</p>
+<p>Отметив «галочкой» основной класс, вы найдете слова всех вложенных подклассов. Чтобы исключить из поиска какой-либо из вложенных подклассов, уберите «галочку» при названии этого подкласса. Обратите внимание, что словник основного класса чаще всего не исчерпывается словами вложенных подклассов (так, класс глаголов «физического воздействия» включает в себя не только глаголы создания и уничтожения, но и, например, глаголы обработки типа <i>вымыть</i>). Чтобы найти слова, входящие только в основной класс, уберите «галочки» при всех вложенных подклассах.</p>
+<p>Вы можете задать поиск по определенной части речи, а для имен существительных - по одному из семантических разрядов. В верхней части формы располагаются закладки "Имена предметные", "Прилагательные", "Глаголы" и т. д. Щелкнув по закладке, вы перейдете к форме с семантическими признаками, относящимися к нужной Вам части речи.</p>
+<p>В настоящее время в корпусе не разрешена неоднозначность семантических характеристик полисемичных слов (так, на запрос «человек+отрицательная характеристика» найдутся все вхождения словоформы <i>собака</i>, в том числе те, где речь идет о животном; на запрос «часть мебели» найдутся все словоформы <i>ножка</i>). В ряде случаев для повышения качества поиска можно дополнительно задать грамматические характеристики (чтобы на запрос «человек+отрицательная характеристика» не нашлись слова <i>мешок, дуб</i> и т. п. в прямом значении, задайте характеристику «одушевленное»)</p>
+</p></details>
+<div class="hidden"><details><summary><span>Выбрать</span></summary>
+<details><summary><span>Предметные имена</span></summary>
+<table>
+<tr><td rowspan="3">Таксономия<br>
+<input type="checkbox">лица, в том числе<br>
+<p><input type="checkbox">этнонимы</p><br>
+<p><input type="checkbox">имена родства</p><br>
+<p><input type="checkbox">сверхъестественные существа</p>
+
+<input type="checkbox">животные<br>
+<input type="checkbox">растения<br>
+<input type="checkbox">вещества и материалы<br>
+<input type="checkbox">пространство и место<br>
+<input type="checkbox">здания и сооружения<br>
+
+
+<input type="checkbox">инструменты и приспособления, в том числе:<br>
+<p><input type="checkbox">инструменты</p><br>
+<p><input type="checkbox">механизмы и приборы</p><br>
+<p><input type="checkbox">транспортные средства</p><br>
+<p><input type="checkbox">оружие</p><br>
+<p><input type="checkbox">музыкальные инструменты</p><br>
+<p><input type="checkbox">мебель</p><br>
+<p><input type="checkbox">посуда</p><br>
+<p><input type="checkbox">одежда и обувь</p><br>
+<input type="checkbox">еда и напитки<br>
+<input type="checkbox">тексты
+</td>
+<td rowspan="3">Мeреология<br>
+<input type="checkbox">части, в том числе:<br>
+<p><input type="checkbox">части тела и органы человека</p><br>
+<p><input type="checkbox">части тела и органы животных</p><br>
+<p><input type="checkbox">части растений</p><br>
+<p><input type="checkbox">части зданий и сооружений</p><br>
+
+<p><input type="checkbox"> части приспособлений, в том числе:</p><br>
+<div class="double">
+<p><input type="checkbox">части инструментов</p><br>
+<p><input type="checkbox">части механизмов и приборов</p><br>
+<p><input type="checkbox">части транспортных средств</p><br>
+<p><input type="checkbox">части оружия</p><br>
+<p><input type="checkbox">части музыкальных инструментов</p><br>
+<p><input type="checkbox">части предметов мебели</p><br>
+<p><input type="checkbox">части предметов посуды</p><br>
+<p><input type="checkbox">части одежды и обуви</p><br>
+</div>
+
+<input type="checkbox">кванты и порции вещества<br>
+<input type="checkbox">множества и совокупности<br>
+<input type="checkbox">имена классов
+</td>
+<td>Топология<br>
+<input type="checkbox">вместилища<br>
+<input type="checkbox">горизонтальные поверхности
+</td></tr>
+<tr><td>оценка, в том числе:<br>
+<p><input type="checkbox">положительная</p><br>
+<p><input type="checkbox">отрицательная</p>
+</td></tr>
+<tr><td>Словообразование<br>
+<input type="checkbox">диминутивы<br>
+<input type="checkbox">аугментативы<br>
+<input type="checkbox">сингулятивы<br>
+<input type="checkbox">nomina agentis<br>
+<input type="checkbox">nomina feminina
+</td></tr></table>
+</details> 
+<br>
+<details><summary><span>Непредметные имена</span></summary>
+<table>
+<tr><td rowspan="3">Таксономия<br>
+<input type="checkbox">движение, в том числе:<br>
+<p><input type="checkbox">изменение положения тела,части тела</p>
+<input type="checkbox">помещение объекта<br>
+<input type="checkbox">физическое воздействие, в том числе:
+<p><input type="checkbox"></p>создание физического объекта<br>
+<p><input type="checkbox"></p>уничтожение<br>
+<input type="checkbox">изменение состояния или признака<br>
+<input type="checkbox">бытийная сфера, в том числе:
+<p><input type="checkbox">существование</p>
+<p><input type="checkbox">начало существования</p>
+<p><input type="checkbox">прекращение существования</p>
+<input type="checkbox">местонахождение, в том числе:<br>
+<p><input type="checkbox">положение тела в пространстве</p><br>
+<input type="checkbox">контакт и опора<br>
+<input type="checkbox">посессивная сфера<br>
+<input type="checkbox">ментальная сфера<br>
+<input type="checkbox">восприятие<br>
+<input type="checkbox">психическая сфера, в том числе:<br>
+<p><input type="checkbox">эмоция</p>
+<p><input type="checkbox">воля</p>
+</td>
+<td rowspan="3">
+<input type="checkbox">речь<br>
+<input type="checkbox">физиологическая сфера<br>
+<input type="checkbox">природное явление<br>
+<input type="checkbox">звук<br>
+<input type="checkbox">цвет<br>
+<input type="checkbox">свет<br>
+<input type="checkbox">запах и вкус<br>
+<input type="checkbox">температура<br>
+<input type="checkbox">время, в том числе:<br>
+<p><input type="checkbox">период</p>
+<p><input type="checkbox">момент</p>
+<p><input type="checkbox">день недели</p>
+<p><input type="checkbox">месяц</p>
+<p><input type="checkbox">возраст</p>
+<input type="checkbox">свойство человека<br>
+<input type="checkbox">поведение и поступки человека<br>
+<input type="checkbox">взаимодействие и взаимоотношение<br>
+<input type="checkbox">мероприятие<br>
+<input type="checkbox">болезнь<br>
+<input type="checkbox">игра<br>
+<input type="checkbox">спорт<br>
+<input type="checkbox">параметры<br>
+<input type="checkbox">единица измерения
+</td>
+<td>Мереология<br>
+<input type="checkbox">часть<br>
+<input type="checkbox">квант<br>
+<input type="checkbox">множество
+</td></tr>
+<tr><td>оценка, в том числе:<br>
+<p><input type="checkbox">положительная</p><br>
+<p><input type="checkbox">отрицательная</p>
+</td></tr>
+<tr><td>Словообразование<br>
+<input type="checkbox">отглагольные имена<br>
+<input type="checkbox">отадъективные имена<br>
+</td></tr></table></details><br>
+<details><summary><span>Имена собственные</span></summary>
+<table>
+<tr><td>Таксономия<br>
+<input type="checkbox">лица, в том числе:<br>
+<p><input type="checkbox">имена</p>
+<p><input type="checkbox">отчества</p>
+<p><input type="checkbox">фамилии</p>
+<input type="checkbox">топонимы<br>
+</td></tr>
+<tr><td>
+Словообразовательные корреляты<br>
+<input type="checkbox">гипокористические и стяженные формы<br>
+<input type="checkbox">аббревиатуры<br>
+</td></tr></table></details><br>
+<details><summary><span>Прилагательные</span></summary>
+<table>
+<tr><td rowspan="2">Разряд<br>
+<input type="checkbox">качественные<br>
+<input type="checkbox">относительные<br>
+<input type="checkbox">притяжательные<br>
+<input type="checkbox">неизменяемые<br>
+Таксономия<br>
+размер, в том числе:<br>
+<p><input type="checkbox">большой</p>
+<p><input type="checkbox">малый</p>
+<p><input type="checkbox">абсолютный</p>
+расстояние, в том числе:<br>
+<p><input type="checkbox">большое</p>
+<p><input type="checkbox">малое</p>
+количество, в том числе:<br>
+<p><input type="checkbox">большое</p>
+<p><input type="checkbox">малое</p>
+<p><input type="checkbox">абсолютное</p>
+<input type="checkbox">место<br>
+<input type="checkbox">направление
+</td>
+<td rowspan="2">
+время, в том числе:
+<input type="checkbox"><p>длительность, в том числе:<br>
+<p><input type="checkbox">большая</p>
+<p><input type="checkbox">малая</p>
+<p><input type="checkbox">абсолютная</p><br>
+<input type="checkbox">возраст, в том числе:<br>
+<p><input type="checkbox">большой</p>
+<p><input type="checkbox">малый</p>
+<p><input type="checkbox">абсолютный</p></p>
+скорость, в том числе:<br>
+<p><input type="checkbox">большая</p>
+<p><input type="checkbox">малая</p>
+физические свойства, в том числе:<br>
+<p><input type="checkbox">форма</p>
+<p><input type="checkbox">цвет</p>
+<p><input type="checkbox">вкус</p>
+<p><input type="checkbox">запах</p>
+<p><input type="checkbox">температура</p>
+<input type="checkbox">качества человека</td>
+<td>оценка, в том числе:<br>
+<p><input type="checkbox">положительная</p><br>
+<p><input type="checkbox">отрицательная</p>
+</td></tr>
+<tr><td>Словообразование<br>
+<input type="checkbox">диминутивы<br>
+<input type="checkbox">аугментативы<br>
+<input type="checkbox">аттенуативы<br>
+<input type="checkbox">хабитивы<br>
+<input type="checkbox">каритивы<br>
+потенциальные, в том числе:
+<p><input type="checkbox">поссибилитивы</p>
+<p><input type="checkbox">импоссибилитивы</p>
+<input type="checkbox">отыменные прилагательные<br>
+в том числе образованные от имен со значением:<br>
+<p><input type="checkbox">лица</p>
+<p><input type="checkbox">животные</p>
+<p><input type="checkbox">растения</p>
+<p><input type="checkbox">вещества и материалы</p>
+<p><input type="checkbox">пространство и место</p>
+<p><input type="checkbox">здания и сооружения</p>
+<p><input type="checkbox">инструменты и приспособления</p>
+<p><input type="checkbox">еда и напитки</p>
+<p><input type="checkbox">тексты</p>
+<p><input type="checkbox">части тела и органы</p>
+<input type="checkbox">отглагольные прилагательные<br>
+<input type="checkbox">отадвербиальные прилагательные
+</td></tr></table></details><br>
+<details><summary><span>Числительные</span></summary>
+<table><tr><td>
+<input type="checkbox">количественные, в том числе:<br>
+<p><input type="checkbox">числительные малого количества</p>
+<input type="checkbox">порядковые<br>
+<input type="checkbox">собирательные,в том числе:<br>
+<p><input type="checkbox">собирательные малого количества</p></td></tr></table></details>
+<br>
+<details><summary><span>Местоимения</span></summary>
+<table><tr><td>Разряд<br>
+<input type="checkbox">личные<br>
+<input type="checkbox">возвратные<br>
+<input type="checkbox">притяжательные<br>
+<input type="checkbox">вопросительные/относительные<br>
+<input type="checkbox">указательные<br>
+<input type="checkbox">неопределенные<br>
+<input type="checkbox">отрицательные<br>
+<input type="checkbox">кванторные(определительные)<br>
+</td></tr></table></details><br>
+<details><summary><span>Глаголы</span></summary>
+<table>
+<tr><td rowspan="3">
+Таксономия<br>
+<input type="checkbox">движения, в том числе:
+<p><input type="checkbox">изменение положение тела, части тела</p>
+<input type="checkbox">помещение объекта<br>
+<input type="checkbox">физическое воздействие, в том числе:
+<p><input type="checkbox">создание физического объекта</p>
+<p><input type="checkbox">уничтожение</p>
+<input type="checkbox">изменение состояния или признака<br>
+<input type="checkbox">бытийная сфера
+<p><input type="checkbox">существование</p>
+<p><input type="checkbox">начало существование</p>
+<p><input type="checkbox">прекращение существования</p>
+<input type="checkbox">местонахождение, в том числе:
+<p><input type="checkbox">положение тела в пространстве</p>
+<input type="checkbox">контакт и опора
+</td>
+<td rowspan="3"><input type="checkbox">посессивная сфера<br>
+<input type="checkbox">ментальная сфера<br>
+<input type="checkbox">восприятие<br>
+<input type="checkbox">психическая сфера, в том числе:
+<p><input type="checkbox">эмоция</p>
+<p><input type="checkbox">воля</p>
+<input type="checkbox">речь<br>
+<input type="checkbox">поведение человека<br>
+<input type="checkbox">физиологическая сфера<br>
+<input type="checkbox">природное явление<br>
+<input type="checkbox">звук<br>
+<input type="checkbox">свет<br>
+<input type="checkbox">запах</td>
+<td>Каузация<br>
+<input type="checkbox">каузативные глаголы<br>
+<input type="checkbox">некаузативные глаголы
+</td></tr>
+<tr><td>Служебные глаголы<br>
+<input type="checkbox">фазовые<br>
+<input type="checkbox">служебные каузативные
+</td></tr>
+<tr><td>Словообразование<br>
+<input type="checkbox">приставочные глаголы<br>
+<input type="checkbox">семельфактивы<br>
+<input type="checkbox">вторичные императивы(-ива-, -ва-, -а-)
+</td></tr></table>
+</details><br>
+<details><summary><span>Наречия</span></summary>
+<table><tr><td>
+Таксономия<br>
+<input type="checkbox">место<br>
+<input type="checkbox">направление<br>
+<input type="checkbox">расстояние, в том числе:
+<p><input type="checkbox">большое</p>
+<p><input type="checkbox">малое</p>
+<input type="checkbox">время, в том числе:
+<p><input type="checkbox">длительность, в том числе:</p>
+<div class="double">
+<p><input type="checkbox">большая</p>
+<p><input type="checkbox">малая</p>
+</div>
+<p><input type="checkbox">возраст</p>
+<input type="checkbox">скорость, в том числе:<br>
+<p><input type="checkbox">большая</p>
+<p><input type="checkbox">малая</p>
+<input type="checkbox">количество, в том числе:<br>
+<p><input type="checkbox">большое</p>
+<p><input type="checkbox">малое</p>
+</td>
+<td><input type="checkbox">Оценка, в том числе:<br>
+<p><input type="checkbox">положительная</p>
+<p><input type="checkbox">отрицательная</p>
+</td>
+<td>
+<input type="checkbox">диминутивы<br>
+<input type="checkbox">аттентуативы<br>
+<input type="checkbox">отыменные наречия<br>
+<input type="checkbox">отглагольные наречия<br>
+<input type="checkbox">отадъективные наречия<br>
+<p>в том числе образованные от прилагательных со значением:<br><input type="checkbox">размер, в том числе:</p>
+<div class="double">
+<p><input type="checkbox">большой</p>
+<p><input type="checkbox">малый</p>
+</div>
+<p><input type="checkbox">физические свойства, в том числе:</p>
+<div class="double">
+<p><input type="checkbox">форма</p>
+<p><input type="checkbox">цвет</p>
+<p><input type="checkbox">вкус</p>
+<p><input type="checkbox">запах</p>
+<p><input type="checkbox">температура</p>
+<p><input type="checkbox">вес</p></div>
+<input type="checkbox">качества человека</td></tr></table>
+</details><br>
+</details><br></div>
+<details><summary><span><img src="img/quest.png" width="16" height="16"></span></summary><p><p>По умолчанию поиск производится по семантической разметке всех словарных значений слова. Например, если в поле "Семантические признаки" задан признак качества человека, то в корпусе будут найдены как прилагательные <i>умный, верный, коварный</i>, у которых этот признак характеризует основное значение слова, так и прилагательные <i>мягкий</i> и <i>холодный</i>, у которых значение человеческого качества - переносное.</p>
+<p>Чтобы сузить область поиска, отметьте "галочкой" один или два параметра:
+"1-е знач." - поиск по семантической разметке первого словарного значения слова (таким образом, вы признаку качества человека вы найдете примеры с прилагательными <i>умный, верный, коварный</i>, но не <i>мягкий, холодный)</i>.<br>
+"др. знач." - поиск по семантической разметке прочих (переносных) значений слова (таким образом, по указанному признаку вы найдете только примеры с прилагательными <i>мягкий, холодный</i> и т.п.).<br>
+"фильтр1" - поиск в контекстах с разрешенной лексико-семантической омонимией, где слово выступает в первом значении. (Например, если задано прилагательное мягкий с семантическим признаком физические свойства, то будут найдены контексты типа <i>мягкий снег</i> или <i>мягкая ткань</i>, но не <i>мягкий человек</i>).<br>
+"фильтр2" - поиск в контекстах с разрешенной лексико-семантической омонимией, где слово выступает в других (переносных) значениях (таким образом, по запросу мягкий + качества человека вы найдете контексты типа <i>мягкий человек</i> или <i>мягкий большевик)</i>.<br>
+Комбинация параметров "1-е знач." и "др. знач." задает поиск по всем значениям слова.<br>
+Комбинация параметров "фильтр1" и "фильтр2" задает поиск по всем контекстам со снятой лексико-семантической омонимией.</p></p></details>
+<input type="checkbox">1-е знач. <input type="checkbox">2-е знач. <input type="checkbox">фильтр 1 <input type="checkbox">фильтр 2</p>
+
+<p>Доп.признаки<details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p>При помощи признаков, задаваемых в поле «Дополнительные параметры», можно искать слова в определённой позиции: перед знаком препинания и после него, в начале и конце предложения, а в поэтическом корпусе -- также в позиции рифмы (конец строки в рифмованных произведениях).</p></details>
+<div class="hidden"><details><summary><span>Выбрать</span></summary>
+<table>
+<tr>
+<td rowspan="2">Повтор*<br>
+<input type="checkbox">лексемы<br>
+<input type="checkbox">части речи<br>
+<input type="checkbox">падежа<br>
+<input type="checkbox">числа<br>
+<input type="checkbox">времени<br>
+<input type="checkbox">рода<br>
+<input type="checkbox">лица<br>
+<input type="checkbox">одушевленности<br>
+*при поиске по текстам с неснятой омонимией задание повтора может работать некорректно:<br>
+день(им,ед) рождения(им,мн или род.ед)
+</td>
+<td>Тип оборота<br>
+<input type="checkbox">mw:ADV<br>
+<input type="checkbox">mw:ADVPRO<br>
+<input type="checkbox">mw:CONJ<br>
+<input type="checkbox">mw:PART<br>
+<input type="checkbox">mw:PR<br>
+<input type="checkbox">mw:PRAEDIC<br>
+<input type="checkbox">mw:SRPRO
+</td>
+<td>Тип оборота<br>
+<input type="checkbox">mw:degr:max<br>
+<input type="checkbox">mw:dir<br>
+<input type="checkbox">mw:dist:max<br>
+<input type="checkbox">mw:dur:max<br>
+<input type="checkbox">mw:ev<br>
+<input type="checkbox">mw:ev:neg<br>
+<input type="checkbox">mw:ev:posit<br>
+<input type="checkbox">mw:loc:body
+</td>
+<td>Тип оборота<br>
+<input type="checkbox">mw:place<br>
+<input type="checkbox">mw:rep<br>
+<input type="checkbox">mw:shift<br>
+<input type="checkbox">mw:space<br>
+<input type="checkbox">mw:speed:max<br>
+<input type="checkbox">mw:time
+</td></tr>
+<tr><td colspan="2">Слово перед<br>
+<input type="checkbox">любым знаком препинания<br>
+<input type="checkbox">точкой<br>
+<input type="checkbox">запятой<br>
+<input type="checkbox">двоеточием<br>
+<input type="checkbox">точкой с запятой<br>
+<input type="checkbox">тире<br>
+<input type="checkbox">восклицательным знаком<br>
+<input type="checkbox">вопросительным знаком
+</td>
+<td>Слово после<br>
+<input type="checkbox">любого знака препинания<br>
+<input type="checkbox">точки<br>
+<input type="checkbox">запятой<br>
+<input type="checkbox">двоеточия<br>
+<input type="checkbox">точки с запятой<br>
+<input type="checkbox">тире<br>
+<input type="checkbox">восклицательного знака<br>
+<input type="checkbox">mвопросительного знака
+</td></tr>
+<tr><td>
+<input type="checkbox">словарное<br>
+<input type="checkbox">несловарное
+</td>
+<td colspan="3">
+<input type="checkbox">слово с заглавной буквы<br>
+<input type="checkbox">в начале предложения<br>
+<input type="checkbox">в конце предложения
+</td></tr>
+</table>
+</details>
+</div>
+
+<div class="hidden"><p>Словообразование </p>
+<details><summary><span>Выбрать</span></summary>
+<p>Текст: <input type="text" id="text" name="text"><br>
+<input type="checkbox"> С учетом чередования <br>
+Тип морфемы: <br>
+<input type="radio" name="morph" value="префикс" checked="checked"/> префикс <input type="radio" name="morph" value="корень"/>корень <input type="radio" name="morph" value="суффикс"/>суффикс <input type="radio" name="morph" value="флексия"/>флексия <br>
+Позиция: <input type="text" id="position" name="position">
+</details>
+</div>
+</div>
+<p>Расстояние: от <input type="nubmer"> до <input type="nubmer"><br>
+<details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p><p>Между поисковыми строками имеется окно «Расстояние: от _ до _». Оно служит для того, чтобы точнее определить структуру сочетания слов, которое вы ищете. Между соседними словами расстояние считается равным одному слову; расстояние, равное нулю, означает совпадение словоформ. Так, расстояние от 1 до 3 между словом (лексемой) <i>критика</i> и грамматической характеристикой «существительное в родительном падеже» соответствует контекстам <i>критика взглядов, критика чистого разума</i> и <i>критика буржуазных философских систем</i>. Если не задать минимальное расстояние, то оно по умолчанию будет равным нулю, и найдутся словоформы <i>критики</i> и <i>критик</i>, в которых признаки обеих строк сочетаются.</p>
+<p>Отрицательное число в поле «Расстояние» соответствует обратному порядку слов. Например:<br>
+условие «от –3 до 3» будет выполнено для пары слов, отстоящих друг от друга не более чем на 3 словопозиции в любую сторону;<br>
+условие «до –3» выберет потомков, отстоящих на расстояние от 0 до 3 слов влево от слова-родителя;<br>
+условие «от –3» выберет потомков, отстоящих на расстояние 3 и более слов влево от слова-родителя.</p></p></details></p>
+<div class="grammatic-parameters">
+<div class="word">
+<p>Слово <details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p>В поле «Слово» указывается искомая лексема (обязательно в словарной форме: отечество, а не отечества) или словоформа (в кавычках: "отечества"). В поле «Слово» действуют символ *, обозначающий любую последовательность символов в начале или конце лексемы или словоформы, а также логические операторы «ИЛИ» и «НЕ»: для поиска слов <i>любовь</i> или <i>ненависть</i> нужно ввести любовь|ненависть, для поиска любого слова, кроме <i>без</i>, нужно ввести -без. Эти символы можно комбинировать при помощи логического «И», задаваемого знаком & или одиночным пробелом. Так, запрос *вед -швед найдет все лексемы, заканчивающиеся на <i>вед (языковед, искусствовед...)</i>, но не <i>швед</i>; запрос мой&"его" найдет все вхождения лексемы <i>мой</i> и словоформы <i>его</i>. Чтобы искать все лексемы, кроме нескольких определенных, следует поставить в начале запроса звёздочку: например * -папа -мама
+</p></details><input id="form" type="text" id="form" name="form">
+</p>
+</div>
+<p>Грам.признаки <details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p><p>В поле «Грамматические признаки» указываются искомые морфологические характеристики лексемы и/или словоформы. Эти признаки можно указать при помощи служебного окна, открывающегося по ссылке «Выбрать», или же набрать на клавиатуре.</p> <p>В поле «Грамматические признаки» действует логическое «ИЛИ», задаваемое при помощи знака |, а также логическое «И», задаваемое знаком & или одиночным пробелом (разрешается использование любого числа незначащих пробелов вокруг знаков | и &). При записи сложных выражений используются круглые скобки. Например, S & (nom|acc) означает существительное в именительном или винительном падеже. Инвентарь обозначений грамматических признаков и необходимые комментарии см. в разделе «Морфология». Но проще выбрать грамматические признаки (или задать несколько альтернативных лексем) в служебном окне.</p> <p>Служебное окно, открывающееся по ссылке «Выбрать», содержит перечень морфологических характеристик, разбитых по грамматическим категориям: часть речи, падеж, род, залог, число и т. п. Отметьте «галочками» те характеристики словоформ, которые вы хотите найти. Внутри каждой категории признаки в нормальном случае являются взаимоисключающими (например, глагол не может стоять в первом и третьем лице одновременно), поэтому «галочки», отмечающие грамматические признаки одной категории, трактуются как логическое «ИЛИ» (невзаимоисключающие пометы одной категории при одном слове также найдутся), а отмечающие признаки разных категорий — как логическое «И». Чтобы инвертировать отмеченные признаки одной категории (изменить выбранные на невыбранные, и наоборот), щелкните левой кнопкой мыши на названии этой категории. Это способ выразить логическое «НЕ»: например, чтобы искать любой падеж, кроме творительного, выберите позицию «творительный падеж», а затем инвертируйте список значений категории падежа.</p>
+<p/></details>
+<div class="hidden"><details><summary><span>Выбрать</span></summary>
+<table>
+<tr><td rowspan="3">Часть речи<br>
+<input type="checkbox">существительное<br>
+<input type="checkbox">прилагательное<br>
+<input type="checkbox">числительное<br>
+<input type="checkbox">числ-прил<br>
+<input type="checkbox">глагол<br>
+<input type="checkbox">наречие<br>
+<input type="checkbox">предикатив<br>
+<input type="checkbox">вводное слово<br>
+<input type="checkbox">мест-сущ<br>
+<input type="checkbox">мест-прил<br>
+<input type="checkbox">мест-предикатив<br>
+<input type="checkbox">местоименное наречие<br>
+<input type="checkbox">предлог<br>
+<input type="checkbox">союз<br>
+<input type="checkbox">частица<br>
+<input type="checkbox">междометие
+</td>
+<td rowspan="2">Падеж<br>
+<input type="checkbox">именительный<br>
+<input type="checkbox">звательный*<br>
+<input type="checkbox">родительный<br>
+<input type="checkbox">родительный 2<br>
+<input type="checkbox">дательный<br>
+<input type="checkbox">винительный<br>
+<input type="checkbox">винительный 2*<br>
+<input type="checkbox">творительный<br>
+<input type="checkbox">предложный<br>
+<input type="checkbox">предложный 2<br>
+<input type="checkbox">счетная форма
+</td>
+<td>Наклонение/Форма<br>
+<input type="checkbox">изъявительное<br>
+<input type="checkbox">повелительное<br>
+<input type="checkbox">повелительное 2<br>
+<input type="checkbox">инфинитив<br>
+<input type="checkbox">причастие<br>
+<input type="checkbox">деепричастие
+</td>
+<td>Степень/Краткость<br>
+<input type="checkbox">сравнительная<br>
+<input type="checkbox">сравнительная 2<br>
+<input type="checkbox">превосходная<br>
+<input type="checkbox">полная форма<br>
+<input type="checkbox">краткая форма
+</td></tr>
+<tr><td>Время<br>
+<input type="checkbox">настоящее<br>
+<input type="checkbox">будущее<br>
+<input type="checkbox">прошедшее
+</td>
+<td>Переходность<br>
+<input type="checkbox">переходный*<br>
+<input type="checkbox">непереходный*
+</td></tr>
+<tr><td>Число<br>
+<input type="checkbox">единственное<br>
+<input type="checkbox">множественное
+</td>
+<td>Лицо<br>
+<input type="checkbox">первое<br>
+<input type="checkbox">второе<br>
+<input type="checkbox">третье
+</td>
+<td rowspan="3">Прочее<br>
+<input type="checkbox">цифровая запись<br>
+<input type="checkbox">аномальная форма*<br>
+<input type="checkbox">искаженная форма*<br>
+<input type="checkbox">инициал*<br>
+<input type="checkbox">сокращение*<br>
+<input type="checkbox">несклоняемое*<br>
+<input type="checkbox">топоним**
+</td></tr>
+<tr><td rowspan="2">Имена собственные<br>
+<input type="checkbox">имя<br>
+<input type="checkbox">фамилия<br>
+<input type="checkbox">отчество
+</td>
+<td>Род<br>
+<input type="checkbox">мужской<br>
+<input type="checkbox">женский<br>
+<input type="checkbox">средний<br>
+<input type="checkbox">общий
+</td>
+<td>Залог<br>
+<input type="checkbox">действительный<br>
+<input type="checkbox">срадательный<br>
+<input type="checkbox">медиальный
+</td></tr>
+<tr><td>Одушевленность<br>
+<input type="checkbox">одушевленный<br>
+<input type="checkbox">неодушевленный
+</td>
+<td>Вид<br>
+<input type="checkbox">совершенный<br>
+<input type="checkbox">несовершенный
+</td></tr></table>
+</details>
+</div>
+
+<p>Семант.признаки <details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p><p>В поле «Семантические признаки» указываются искомые семантические и словообразовательные характеристики лексемы. Эти признаки можно задать при помощи служебного окна, открывающегося по ссылке «Выбрать», или же набрать на клавиатуре.</p>
+<p>Служебное окно, открывающееся по ссылке «Выбрать», содержит перечень семантических характеристик, разбитых по нескольким категориям: разряд, таксономия, мереология, оценка, словообразование и т. п. При наведении курсора на любой пункт этого перечня во всплывающей подсказке появятся примеры слов, имеющих данные характеристики. Отметьте «галочками» (checkbox) те характеристики словоформ, которые вы хотите найти. «Галочки», отмечающие семантические признаки внутри одной категории, трактуются как логическое «ИЛИ» (например, в категории «Таксономия» можно задать поиск глаголов «движения» и «физического воздействия»). Галочки, отмечающие признаки разных категорий, трактуются как логическое «И» (например, чтобы найти приставочные глаголы движения, нужно отметить «галочками» признак «движение» в категории «Таксономия» и признак «приставочные глаголы» в категории «Словообразование».</p>
+<p>Как правило, семантические характеристики имеют иерархическую структуру, например:<br>
+бытийная сфера<br>
+существование<br>
+начало существования<br>
+прекращение существования</p>
+<p>Отметив «галочкой» основной класс, вы найдете слова всех вложенных подклассов. Чтобы исключить из поиска какой-либо из вложенных подклассов, уберите «галочку» при названии этого подкласса. Обратите внимание, что словник основного класса чаще всего не исчерпывается словами вложенных подклассов (так, класс глаголов «физического воздействия» включает в себя не только глаголы создания и уничтожения, но и, например, глаголы обработки типа <i>вымыть</i>). Чтобы найти слова, входящие только в основной класс, уберите «галочки» при всех вложенных подклассах.</p>
+<p>Вы можете задать поиск по определенной части речи, а для имен существительных - по одному из семантических разрядов. В верхней части формы располагаются закладки "Имена предметные", "Прилагательные", "Глаголы" и т. д. Щелкнув по закладке, вы перейдете к форме с семантическими признаками, относящимися к нужной Вам части речи.</p>
+<p>В настоящее время в корпусе не разрешена неоднозначность семантических характеристик полисемичных слов (так, на запрос «человек+отрицательная характеристика» найдутся все вхождения словоформы <i>собака</i>, в том числе те, где речь идет о животном; на запрос «часть мебели» найдутся все словоформы <i>ножка</i>). В ряде случаев для повышения качества поиска можно дополнительно задать грамматические характеристики (чтобы на запрос «человек+отрицательная характеристика» не нашлись слова <i>мешок, дуб</i> и т. п. в прямом значении, задайте характеристику «одушевленное»)</p>
+</p></details>
+<div class="hidden"><details><summary><span>Выбрать</span></summary>
+<details><summary><span>Предметные имена</span></summary>
+<table>
+<tr><td rowspan="3">Таксономия<br>
+<input type="checkbox">лица, в том числе<br>
+<p><input type="checkbox">этнонимы</p><br>
+<p><input type="checkbox">имена родства</p><br>
+<p><input type="checkbox">сверхъестественные существа</p>
+
+<input type="checkbox">животные<br>
+<input type="checkbox">растения<br>
+<input type="checkbox">вещества и материалы<br>
+<input type="checkbox">пространство и место<br>
+<input type="checkbox">здания и сооружения<br>
+
+
+<input type="checkbox">инструменты и приспособления, в том числе:<br>
+<p><input type="checkbox">инструменты</p><br>
+<p><input type="checkbox">механизмы и приборы</p><br>
+<p><input type="checkbox">транспортные средства</p><br>
+<p><input type="checkbox">оружие</p><br>
+<p><input type="checkbox">музыкальные инструменты</p><br>
+<p><input type="checkbox">мебель</p><br>
+<p><input type="checkbox">посуда</p><br>
+<p><input type="checkbox">одежда и обувь</p><br>
+<input type="checkbox">еда и напитки<br>
+<input type="checkbox">тексты
+</td>
+<td rowspan="3">Мeреология<br>
+<input type="checkbox">части, в том числе:<br>
+<p><input type="checkbox">части тела и органы человека</p><br>
+<p><input type="checkbox">части тела и органы животных</p><br>
+<p><input type="checkbox">части растений</p><br>
+<p><input type="checkbox">части зданий и сооружений</p><br>
+
+<p><input type="checkbox"> части приспособлений, в том числе:</p><br>
+<div class="double">
+<p><input type="checkbox">части инструментов</p><br>
+<p><input type="checkbox">части механизмов и приборов</p><br>
+<p><input type="checkbox">части транспортных средств</p><br>
+<p><input type="checkbox">части оружия</p><br>
+<p><input type="checkbox">части музыкальных инструментов</p><br>
+<p><input type="checkbox">части предметов мебели</p><br>
+<p><input type="checkbox">части предметов посуды</p><br>
+<p><input type="checkbox">части одежды и обуви</p><br>
+</div>
+
+<input type="checkbox">кванты и порции вещества<br>
+<input type="checkbox">множества и совокупности<br>
+<input type="checkbox">имена классов
+</td>
+<td>Топология<br>
+<input type="checkbox">вместилища<br>
+<input type="checkbox">горизонтальные поверхности
+</td></tr>
+<tr><td>оценка, в том числе:<br>
+<p><input type="checkbox">положительная</p><br>
+<p><input type="checkbox">отрицательная</p>
+</td></tr>
+<tr><td>Словообразование<br>
+<input type="checkbox">диминутивы<br>
+<input type="checkbox">аугментативы<br>
+<input type="checkbox">сингулятивы<br>
+<input type="checkbox">nomina agentis<br>
+<input type="checkbox">nomina feminina
+</td></tr></table>
+</details> 
+<br>
+<details><summary><span>Непредметные имена</span></summary>
+<table>
+<tr><td rowspan="3">Таксономия<br>
+<input type="checkbox">движение, в том числе:<br>
+<p><input type="checkbox">изменение положения тела,части тела</p>
+<input type="checkbox">помещение объекта<br>
+<input type="checkbox">физическое воздействие, в том числе:
+<p><input type="checkbox"></p>создание физического объекта<br>
+<p><input type="checkbox"></p>уничтожение<br>
+<input type="checkbox">изменение состояния или признака<br>
+<input type="checkbox">бытийная сфера, в том числе:
+<p><input type="checkbox">существование</p>
+<p><input type="checkbox">начало существования</p>
+<p><input type="checkbox">прекращение существования</p>
+<input type="checkbox">местонахождение, в том числе:<br>
+<p><input type="checkbox">положение тела в пространстве</p><br>
+<input type="checkbox">контакт и опора<br>
+<input type="checkbox">посессивная сфера<br>
+<input type="checkbox">ментальная сфера<br>
+<input type="checkbox">восприятие<br>
+<input type="checkbox">психическая сфера, в том числе:<br>
+<p><input type="checkbox">эмоция</p>
+<p><input type="checkbox">воля</p>
+</td>
+<td rowspan="3">
+<input type="checkbox">речь<br>
+<input type="checkbox">физиологическая сфера<br>
+<input type="checkbox">природное явление<br>
+<input type="checkbox">звук<br>
+<input type="checkbox">цвет<br>
+<input type="checkbox">свет<br>
+<input type="checkbox">запах и вкус<br>
+<input type="checkbox">температура<br>
+<input type="checkbox">время, в том числе:<br>
+<p><input type="checkbox">период</p>
+<p><input type="checkbox">момент</p>
+<p><input type="checkbox">день недели</p>
+<p><input type="checkbox">месяц</p>
+<p><input type="checkbox">возраст</p>
+<input type="checkbox">свойство человека<br>
+<input type="checkbox">поведение и поступки человека<br>
+<input type="checkbox">взаимодействие и взаимоотношение<br>
+<input type="checkbox">мероприятие<br>
+<input type="checkbox">болезнь<br>
+<input type="checkbox">игра<br>
+<input type="checkbox">спорт<br>
+<input type="checkbox">параметры<br>
+<input type="checkbox">единица измерения
+</td>
+<td>Мереология<br>
+<input type="checkbox">часть<br>
+<input type="checkbox">квант<br>
+<input type="checkbox">множество
+</td></tr>
+<tr><td>оценка, в том числе:<br>
+<p><input type="checkbox">положительная</p><br>
+<p><input type="checkbox">отрицательная</p>
+</td></tr>
+<tr><td>Словообразование<br>
+<input type="checkbox">отглагольные имена<br>
+<input type="checkbox">отадъективные имена<br>
+</td></tr></table></details><br>
+<details><summary><span>Имена собственные</span></summary>
+<table>
+<tr><td>Таксономия<br>
+<input type="checkbox">лица, в том числе:<br>
+<p><input type="checkbox">имена</p>
+<p><input type="checkbox">отчества</p>
+<p><input type="checkbox">фамилии</p>
+<input type="checkbox">топонимы<br>
+</td></tr>
+<tr><td>
+Словообразовательные корреляты<br>
+<input type="checkbox">гипокористические и стяженные формы<br>
+<input type="checkbox">аббревиатуры<br>
+</td></tr></table></details><br>
+<details><summary><span>Прилагательные</span></summary>
+<table>
+<tr><td rowspan="2">Разряд<br>
+<input type="checkbox">качественные<br>
+<input type="checkbox">относительные<br>
+<input type="checkbox">притяжательные<br>
+<input type="checkbox">неизменяемые<br>
+Таксономия<br>
+размер, в том числе:<br>
+<p><input type="checkbox">большой</p>
+<p><input type="checkbox">малый</p>
+<p><input type="checkbox">абсолютный</p>
+расстояние, в том числе:<br>
+<p><input type="checkbox">большое</p>
+<p><input type="checkbox">малое</p>
+количество, в том числе:<br>
+<p><input type="checkbox">большое</p>
+<p><input type="checkbox">малое</p>
+<p><input type="checkbox">абсолютное</p>
+<input type="checkbox">место<br>
+<input type="checkbox">направление
+</td>
+<td rowspan="2">
+время, в том числе:
+<input type="checkbox"><p>длительность, в том числе:<br>
+<p><input type="checkbox">большая</p>
+<p><input type="checkbox">малая</p>
+<p><input type="checkbox">абсолютная</p><br>
+<input type="checkbox">возраст, в том числе:<br>
+<p><input type="checkbox">большой</p>
+<p><input type="checkbox">малый</p>
+<p><input type="checkbox">абсолютный</p></p>
+скорость, в том числе:<br>
+<p><input type="checkbox">большая</p>
+<p><input type="checkbox">малая</p>
+физические свойства, в том числе:<br>
+<p><input type="checkbox">форма</p>
+<p><input type="checkbox">цвет</p>
+<p><input type="checkbox">вкус</p>
+<p><input type="checkbox">запах</p>
+<p><input type="checkbox">температура</p>
+<input type="checkbox">качества человека</td>
+<td>оценка, в том числе:<br>
+<p><input type="checkbox">положительная</p><br>
+<p><input type="checkbox">отрицательная</p>
+</td></tr>
+<tr><td>Словообразование<br>
+<input type="checkbox">диминутивы<br>
+<input type="checkbox">аугментативы<br>
+<input type="checkbox">аттенуативы<br>
+<input type="checkbox">хабитивы<br>
+<input type="checkbox">каритивы<br>
+потенциальные, в том числе:
+<p><input type="checkbox">поссибилитивы</p>
+<p><input type="checkbox">импоссибилитивы</p>
+<input type="checkbox">отыменные прилагательные<br>
+в том числе образованные от имен со значением:<br>
+<p><input type="checkbox">лица</p>
+<p><input type="checkbox">животные</p>
+<p><input type="checkbox">растения</p>
+<p><input type="checkbox">вещества и материалы</p>
+<p><input type="checkbox">пространство и место</p>
+<p><input type="checkbox">здания и сооружения</p>
+<p><input type="checkbox">инструменты и приспособления</p>
+<p><input type="checkbox">еда и напитки</p>
+<p><input type="checkbox">тексты</p>
+<p><input type="checkbox">части тела и органы</p>
+<input type="checkbox">отглагольные прилагательные<br>
+<input type="checkbox">отадвербиальные прилагательные
+</td></tr></table></details><br>
+<details><summary><span>Числительные</span></summary>
+<table><tr><td>
+<input type="checkbox">количественные, в том числе:<br>
+<p><input type="checkbox">числительные малого количества</p>
+<input type="checkbox">порядковые<br>
+<input type="checkbox">собирательные,в том числе:<br>
+<p><input type="checkbox">собирательные малого количества</p></td></tr></table></details>
+<br>
+<details><summary><span>Местоимения</span></summary>
+<table><tr><td>Разряд<br>
+<input type="checkbox">личные<br>
+<input type="checkbox">возвратные<br>
+<input type="checkbox">притяжательные<br>
+<input type="checkbox">вопросительные/относительные<br>
+<input type="checkbox">указательные<br>
+<input type="checkbox">неопределенные<br>
+<input type="checkbox">отрицательные<br>
+<input type="checkbox">кванторные(определительные)<br>
+</td></tr></table></details><br>
+<details><summary><span>Глаголы</span></summary>
+<table>
+<tr><td rowspan="3">
+Таксономия<br>
+<input type="checkbox">движения, в том числе:
+<p><input type="checkbox">изменение положение тела, части тела</p>
+<input type="checkbox">помещение объекта<br>
+<input type="checkbox">физическое воздействие, в том числе:
+<p><input type="checkbox">создание физического объекта</p>
+<p><input type="checkbox">уничтожение</p>
+<input type="checkbox">изменение состояния или признака<br>
+<input type="checkbox">бытийная сфера
+<p><input type="checkbox">существование</p>
+<p><input type="checkbox">начало существование</p>
+<p><input type="checkbox">прекращение существования</p>
+<input type="checkbox">местонахождение, в том числе:
+<p><input type="checkbox">положение тела в пространстве</p>
+<input type="checkbox">контакт и опора
+</td>
+<td rowspan="3"><input type="checkbox">посессивная сфера<br>
+<input type="checkbox">ментальная сфера<br>
+<input type="checkbox">восприятие<br>
+<input type="checkbox">психическая сфера, в том числе:
+<p><input type="checkbox">эмоция</p>
+<p><input type="checkbox">воля</p>
+<input type="checkbox">речь<br>
+<input type="checkbox">поведение человека<br>
+<input type="checkbox">физиологическая сфера<br>
+<input type="checkbox">природное явление<br>
+<input type="checkbox">звук<br>
+<input type="checkbox">свет<br>
+<input type="checkbox">запах</td>
+<td>Каузация<br>
+<input type="checkbox">каузативные глаголы<br>
+<input type="checkbox">некаузативные глаголы
+</td></tr>
+<tr><td>Служебные глаголы<br>
+<input type="checkbox">фазовые<br>
+<input type="checkbox">служебные каузативные
+</td></tr>
+<tr><td>Словообразование<br>
+<input type="checkbox">приставочные глаголы<br>
+<input type="checkbox">семельфактивы<br>
+<input type="checkbox">вторичные императивы(-ива-, -ва-, -а-)
+</td></tr></table>
+</details><br>
+<details><summary><span>Наречия</span></summary>
+<table><tr><td>
+Таксономия<br>
+<input type="checkbox">место<br>
+<input type="checkbox">направление<br>
+<input type="checkbox">расстояние, в том числе:
+<p><input type="checkbox">большое</p>
+<p><input type="checkbox">малое</p>
+<input type="checkbox">время, в том числе:
+<p><input type="checkbox">длительность, в том числе:</p>
+<div class="double">
+<p><input type="checkbox">большая</p>
+<p><input type="checkbox">малая</p>
+</div>
+<p><input type="checkbox">возраст</p>
+<input type="checkbox">скорость, в том числе:<br>
+<p><input type="checkbox">большая</p>
+<p><input type="checkbox">малая</p>
+<input type="checkbox">количество, в том числе:<br>
+<p><input type="checkbox">большое</p>
+<p><input type="checkbox">малое</p>
+</td>
+<td><input type="checkbox">Оценка, в том числе:<br>
+<p><input type="checkbox">положительная</p>
+<p><input type="checkbox">отрицательная</p>
+</td>
+<td>
+<input type="checkbox">диминутивы<br>
+<input type="checkbox">аттентуативы<br>
+<input type="checkbox">отыменные наречия<br>
+<input type="checkbox">отглагольные наречия<br>
+<input type="checkbox">отадъективные наречия<br>
+<p>в том числе образованные от прилагательных со значением:<br><input type="checkbox">размер, в том числе:</p>
+<div class="double">
+<p><input type="checkbox">большой</p>
+<p><input type="checkbox">малый</p>
+</div>
+<p><input type="checkbox">физические свойства, в том числе:</p>
+<div class="double">
+<p><input type="checkbox">форма</p>
+<p><input type="checkbox">цвет</p>
+<p><input type="checkbox">вкус</p>
+<p><input type="checkbox">запах</p>
+<p><input type="checkbox">температура</p>
+<p><input type="checkbox">вес</p></div>
+<input type="checkbox">качества человека</td></tr></table>
+</details><br>
+</details><br></div>
+<details><summary><span><img src="img/quest.png" width="16" height="16"></span></summary><p><p>По умолчанию поиск производится по семантической разметке всех словарных значений слова. Например, если в поле "Семантические признаки" задан признак качества человека, то в корпусе будут найдены как прилагательные <i>умный, верный, коварный</i>, у которых этот признак характеризует основное значение слова, так и прилагательные <i>мягкий</i> и <i>холодный</i>, у которых значение человеческого качества - переносное.</p>
+<p>Чтобы сузить область поиска, отметьте "галочкой" один или два параметра:
+"1-е знач." - поиск по семантической разметке первого словарного значения слова (таким образом, вы признаку качества человека вы найдете примеры с прилагательными <i>умный, верный, коварный</i>, но не <i>мягкий, холодный)</i>.<br>
+"др. знач." - поиск по семантической разметке прочих (переносных) значений слова (таким образом, по указанному признаку вы найдете только примеры с прилагательными <i>мягкий, холодный</i> и т.п.).<br>
+"фильтр1" - поиск в контекстах с разрешенной лексико-семантической омонимией, где слово выступает в первом значении. (Например, если задано прилагательное мягкий с семантическим признаком физические свойства, то будут найдены контексты типа <i>мягкий снег</i> или <i>мягкая ткань</i>, но не <i>мягкий человек</i>).<br>
+"фильтр2" - поиск в контекстах с разрешенной лексико-семантической омонимией, где слово выступает в других (переносных) значениях (таким образом, по запросу мягкий + качества человека вы найдете контексты типа <i>мягкий человек</i> или <i>мягкий большевик)</i>.<br>
+Комбинация параметров "1-е знач." и "др. знач." задает поиск по всем значениям слова.<br>
+Комбинация параметров "фильтр1" и "фильтр2" задает поиск по всем контекстам со снятой лексико-семантической омонимией.</p></p></details>
+<input type="checkbox">1-е знач. <input type="checkbox">2-е знач. <input type="checkbox">фильтр 1 <input type="checkbox">фильтр 2</p>
+
+<p>Доп.признаки<details><summary><span><img src="img/quest.png" width="16" height="16"></summary></span><p>При помощи признаков, задаваемых в поле «Дополнительные параметры», можно искать слова в определённой позиции: перед знаком препинания и после него, в начале и конце предложения, а в поэтическом корпусе -- также в позиции рифмы (конец строки в рифмованных произведениях).</p></details>
+<div class="hidden"><details><summary><span>Выбрать</span></summary>
+<table>
+<tr>
+<td rowspan="2">Повтор*<br>
+<input type="checkbox">лексемы<br>
+<input type="checkbox">части речи<br>
+<input type="checkbox">падежа<br>
+<input type="checkbox">числа<br>
+<input type="checkbox">времени<br>
+<input type="checkbox">рода<br>
+<input type="checkbox">лица<br>
+<input type="checkbox">одушевленности<br>
+*при поиске по текстам с неснятой омонимией задание повтора может работать некорректно:<br>
+день(им,ед) рождения(им,мн или род.ед)
+</td>
+<td>Тип оборота<br>
+<input type="checkbox">mw:ADV<br>
+<input type="checkbox">mw:ADVPRO<br>
+<input type="checkbox">mw:CONJ<br>
+<input type="checkbox">mw:PART<br>
+<input type="checkbox">mw:PR<br>
+<input type="checkbox">mw:PRAEDIC<br>
+<input type="checkbox">mw:SRPRO
+</td>
+<td>Тип оборота<br>
+<input type="checkbox">mw:degr:max<br>
+<input type="checkbox">mw:dir<br>
+<input type="checkbox">mw:dist:max<br>
+<input type="checkbox">mw:dur:max<br>
+<input type="checkbox">mw:ev<br>
+<input type="checkbox">mw:ev:neg<br>
+<input type="checkbox">mw:ev:posit<br>
+<input type="checkbox">mw:loc:body
+</td>
+<td>Тип оборота<br>
+<input type="checkbox">mw:place<br>
+<input type="checkbox">mw:rep<br>
+<input type="checkbox">mw:shift<br>
+<input type="checkbox">mw:space<br>
+<input type="checkbox">mw:speed:max<br>
+<input type="checkbox">mw:time
+</td></tr>
+<tr><td colspan="2">Слово перед<br>
+<input type="checkbox">любым знаком препинания<br>
+<input type="checkbox">точкой<br>
+<input type="checkbox">запятой<br>
+<input type="checkbox">двоеточием<br>
+<input type="checkbox">точкой с запятой<br>
+<input type="checkbox">тире<br>
+<input type="checkbox">восклицательным знаком<br>
+<input type="checkbox">вопросительным знаком
+</td>
+<td>Слово после<br>
+<input type="checkbox">любого знака препинания<br>
+<input type="checkbox">точки<br>
+<input type="checkbox">запятой<br>
+<input type="checkbox">двоеточия<br>
+<input type="checkbox">точки с запятой<br>
+<input type="checkbox">тире<br>
+<input type="checkbox">восклицательного знака<br>
+<input type="checkbox">mвопросительного знака
+</td></tr>
+<tr><td>
+<input type="checkbox">словарное<br>
+<input type="checkbox">несловарное
+</td>
+<td colspan="3">
+<input type="checkbox">слово с заглавной буквы<br>
+<input type="checkbox">в начале предложения<br>
+<input type="checkbox">в конце предложения
+</td></tr>
+</table>
+</details>
+</div>
+
+<div class="hidden"><p>Словообразование </p>
+<details><summary><span>Выбрать</span></summary>
+<p>Текст: <input type="text" id="text" name="text"><br>
+<input type="checkbox"> С учетом чередования <br>
+Тип морфемы: <br>
+<input type="radio" name="morph" value="префикс" checked="checked"/> префикс <input type="radio" name="morph" value="корень"/>корень <input type="radio" name="morph" value="суффикс"/>суффикс <input type="radio" name="morph" value="флексия"/>флексия <br>
+Позиция: <input type="text" id="position" name="position">
+</details>
+</div>
+</div>
+</div>
+<p><input class="btn"type="submit" value="искать">
+<input class="btn" type="reset" value="очистить"></p>
+</div>
+</li>
+</section>
+
+
+
+<footer class="main-footer">
+<div class="footer-top">
+<div class="container">
+<p>Работы в 2015—2016 г. выполнены при поддержке РГНФ, проект № 15-04-12018 «Развитие специализированных модулей НКРЯ».</p>
+<div class='line'>
+<img src="img/line.png" height="75" width="1000">
+</div>
+<div class="footer-menu">
+<p>Национальный корпус русского языка © 2003–2017<p>
+</div>
+<div class="footer-menu">
+<p>Поиск осуществляется системой <a href="#">Яндекс. Сервер</a></p>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
